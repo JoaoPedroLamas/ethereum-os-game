@@ -78,7 +78,7 @@ function showResult(time) {
 
     document.getElementById('share-button').onclick = () => {
         const tweetText = `I just typed the code in ${time.toFixed(2)}s on the EthOS Training Game! Try to beat me 👇 #EthOS`;
-        const tweetUrl = `https://x.com/intent/tweet?text=${encodeURIComponent(tweetText)}&url=${encodeURIComponent('https://ethereumos-training.vercel.app')}`;
+        const tweetUrl = `https://x.com/intent/tweet?text=${encodeURIComponent(tweetText)}&url=${encodeURIComponent('https://ethereum-os-game.vercel.app')}`;
         window.open(tweetUrl, '_blank');
     };
 }

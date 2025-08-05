@@ -1,0 +1,216 @@
+@font-face {
+    font-family: 'ChicagoFLF';
+    src: url('assets/ChicagoFLF-01l4rExa.woff2') format('woff2');
+}
+
+body {
+    background: linear-gradient(135deg, #87CEEB, #E6E6FA);
+    margin: 0;
+    padding: 0;
+    font-family: 'ChicagoFLF', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    cursor: url('assets/cursor.png'), auto;
+}
+
+.creator-link {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    color: #000000;
+    text-decoration: none;
+    font-size: 14px;
+    z-index: 100;
+}
+
+.creator-link:hover {
+    text-decoration: underline;
+}
+
+.falling-logo {
+    position: absolute;
+    width: 30px;
+    height: auto;
+    top: 0;
+    animation: fall 10s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes fall {
+    0% {
+        top: 0;
+        opacity: 0.8;
+    }
+    20% {
+        opacity: 0.6;
+    }
+    100% {
+        top: 100vh;
+        opacity: 0;
+    }
+}
+
+#container {
+    position: relative;
+    width: 500px;
+    height: 600px;
+    background: transparent;
+    z-index: 1;
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 10;
+}
+
+.button-icon {
+    width: 16px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: #C0C0C0;
+    border: 2px solid #000000;
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 0;
+}
+
+.title-bar {
+    background: linear-gradient(to bottom, #D3D3D3, #A9A9A9);
+    color: #000000;
+    font-size: 14px;
+    padding: 4px;
+    text-align: center;
+    border-bottom: 2px solid #000000;
+    font-weight: bold;
+}
+
+.window-content {
+    padding: 20px;
+    text-align: center;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.window-content p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+button {
+    background: linear-gradient(to bottom, #E0E0E0, #C0C0C0);
+    border: 2px outset #FFFFFF;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover {
+    background: linear-gradient(to bottom, #C0C0C0, #A0A0A0);
+}
+
+button:active {
+    border-style: inset;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Botão Play (quadrado) */
+.play-button {
+    padding: 10px;
+    width: 100px; /* Quadrado */
+    height: 100px; /* Quadrado */
+}
+
+/* Botão Reset (retangular) */
+.reset-button {
+    padding: 8px 20px;
+    width: 150px; /* Retangular */
+    height: 40px;
+}
+
+/* Botão Share (quadrado) */
+.share-button {
+    padding: 8px 20px;
+    width: 150px; /* Retangular */
+    height: 40px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px; /* Espaçamento entre os botões */
+}
+
+#code-background {
+    position: relative;
+    width: 350px;
+    height: 200px;
+    background: url('assets/gradient-bg.png') no-repeat center;
+    background-size: cover;
+    margin: 10px auto;
+    border: 1px solid #000000;
+}
+
+#code-display {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    color: white;
+    opacity: 0.35;
+    user-select: none;
+}
+
+#code-input {
+    font-family: 'ChicagoFLF', Arial, sans-serif;
+    font-size: 18px;
+    padding: 8px;
+    margin: 10px;
+    border: 2px solid #000000;
+    width: 250px;
+    text-align: center;
+}
+
+#timer, #countdown {
+    font-size: 18px;
+    margin: 10px;
+    color: #000000;
+}
+
+#result-time {
+    font-size: 22px;
+    color: #000000;
+}
+
+#ranking {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+#ranking h3 {
+    margin: 0;
+    font-size: 18px;
+}
